@@ -19,7 +19,7 @@ services:
       - .:/app
     environment:
       - TZ=America/Sao_Paulo
-      - DATABASE_URL=postgresql://postgres:password@db:5432/code-challange?encoding=utf8&pool=5&timeout=5000
+      - DATABASE_URL=postgresql://postgres:password@db:5432/code-challenge?encoding=utf8&pool=5&timeout=5000
     ports:
       - "3000:3000"
     depends_on:
