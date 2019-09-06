@@ -1,10 +1,11 @@
 module Api
   module V1
     class EmployeesController < ApplicationController
+      before_action :authorize_access_request!
       before_action :set_employee, only: [:show, :update, :destroy]
 
       def index
-        @employees = Employee.all
+        @employees = Employee.not_admin
 
         render json: @employees
       end
@@ -41,7 +42,7 @@ module Api
         end
 
         def employee_params
-          params.require(:employee).permit(:name, :cpf, :pis, :position, :team)
+          params.require(:employee).permit(:name, :cpf, :pis, :position, :team, :email, :password)
         end
     end
   end

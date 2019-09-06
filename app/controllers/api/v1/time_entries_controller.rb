@@ -1,6 +1,7 @@
 module Api
   module V1
     class TimeEntriesController < ApplicationController
+      before_action :authorize_access_request!
       before_action :set_employee
       before_action :set_time_entry, only: [:show, :update, :destroy]
 
