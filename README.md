@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este projeto provê uma API para gerenciamento de Colaboradores e horários.
+O frontend econtra-se num [repositório separado](https://github.com/matheusvetor/stunning-pancake-front)
 
-Things you may want to cover:
+Este projeto está hospedado no [Heroku](https://stunning-pancake-api.herokuapp.com)
 
-* Ruby version
+A aplicação está dockerizada:
 
-* System dependencies
+`docker-compose up` irá iniciar a aplicação, disponível em `localhost:3000`.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`docker-compose run api rails db:create db:migrate` irá deixar a aplicação pronta para utilização.
